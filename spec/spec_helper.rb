@@ -14,6 +14,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'capybara/rspec'
+require '.app/models/link'
 
 ENV['RACK_ENV'] = 'test'
 require File.expand_path '../../bookmark.rb', __FILE__

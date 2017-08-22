@@ -1,5 +1,4 @@
 
-
 RSpec.feature "Home page" do
 	 scenario "See a list of links" do
 	 	Link.create(url: "http://www.google.co.uk", name: "Google")
