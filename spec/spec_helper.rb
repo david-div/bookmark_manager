@@ -14,10 +14,13 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'capybara/rspec'
-require '.app/models/link'
+require './app/models/link'
+require_relative '../app/app'
+Capybara.app = BookmarkManager
+
 
 ENV['RACK_ENV'] = 'test'
-require File.expand_path '../../bookmark.rb', __FILE__
+# require File.expand_path '../../bookmark.rb', __FILE__
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
@@ -104,5 +107,3 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
-
-Capybara.app = Bookmark
